@@ -124,7 +124,7 @@ st.markdown("""
 </style>
 
 <div class="footer">
-    <p>Dikembangkan untuk Tugas Besar Analisis Kompleksitas Algoritma | © 2025</p>
+    <p>Tugas Besar Analisis Kompleksitas Algoritma | babas - gathfan © 2025</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -360,12 +360,12 @@ def show_range_test_page():
 def main():
     # Sidebar Navigation
     st.sidebar.title("Navigasi")
-    page = st.sidebar.radio("Pilih Mode:", ["🏠 Teori & Big-O", "⚡ Single Test", "📈 Range & Grafik"])
+    page = st.sidebar.radio("Pilih Mode:", ["🏠 Teori", "⚡ Single Test", "📈 Range & Grafik"])
 
     st.sidebar.divider()
     st.sidebar.info("Tugas Besar Analisis Kompleksitas Algoritma")
 
-    if page == "🏠 Teori & Big-O":
+    if page == "🏠 Teori":
         show_theory_page()
     elif page == "⚡ Single Test":
         show_single_test_page()
