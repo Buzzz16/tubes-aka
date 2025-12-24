@@ -1,19 +1,28 @@
-# :earth_americas: GDP dashboard template
+# Analisis Perbandingan Efisiensi Algoritma Iteratif dan Rekursif
 
-A simple Streamlit app showing the GDP of different countries in the world.
+## Deskripsi
+Proyek ini adalah Tugas Besar (Tubes) mata kuliah **Analisis Kompleksitas Algoritma**.
+Aplikasi ini dibangun menggunakan Streamlit untuk memvisualisasikan dan membandingkan efisiensi waktu eksekusi antara algoritma **Iteratif** dan **Rekursif** dalam perhitungan bilangan eksponen.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+## Fitur
+- Input dinamis untuk nilai Basis dan Pangkat.
+- Perhitungan hasil eksponen menggunakan kedua metode.
+- Pengukuran presisi waktu eksekusi (Running Time) dalam milidetik.
+- Analisis perbandingan langsung antara kedua metode.
 
-### How to run it on your own machine
+## Cara Menjalankan
 
-1. Install the requirements
+1.  Pastikan Python sudah terinstal.
+2.  Install dependensi yang diperlukan:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  Jalankan aplikasi Streamlit:
+    ```bash
+    streamlit run streamlit_app.py
+    ```
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Kode Dasar
+Implementasi didasarkan pada logika berikut:
+- **Iteratif**: Menggunakan loop `for` untuk mengalikan basis sebanyak pangkat kali.
+- **Rekursif**: Menggunakan fungsi yang memanggil dirinya sendiri sampai basis case (`exp == 0`) tercapai.
