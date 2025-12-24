@@ -124,7 +124,7 @@ st.markdown("""
 </style>
 
 <div class="footer">
-    <p>Tugas Besar Analisis Kompleksitas Algoritma | babas - gathfan © 2025</p>
+    <p>Tugas Besar Analisis Kompleksitas Algoritma | Babas - Gathfan © 2025</p>
 </div>
 """, unsafe_allow_html=True)
 
