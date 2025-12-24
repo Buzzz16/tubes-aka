@@ -124,7 +124,7 @@ st.markdown("""
 </style>
 
 <div class="footer">
-    <p>Tugas Besar Analisis Kompleksitas Algoritma | Babas - Gathfan © 2025</p>
+    <p>Tugas Besar Analisis Kompleksitas Algoritma | Babass - Gathfann © 2025</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -135,17 +135,15 @@ sys.setrecursionlimit(20000)
 # Definisi Algoritma Core
 # -----------------------------------------------------------------------------
 
-def power_recursive(base, exp):
-    """Menghitung pangkat secara rekursif."""
-    if exp == 0:
+def pangkatRekursif(basis, pangkat):
+    if pangkat == 0:
         return 1    
-    return base * power_recursive(base, exp - 1)
+    return basis * pangkatRekursif(basis, pangkat - 1) 
 
-def power_iterative(base, exp):
-    """Menghitung pangkat secara iteratif."""
+def pangkatIteratif(basis, pangkat):
     result = 1
-    for i in range(exp):
-        result *= base
+    for i in range(pangkat):
+        result *= basis
     return result
 
 # -----------------------------------------------------------------------------
@@ -221,10 +219,10 @@ def show_single_test_page():
 
         try:
             # Hitung Iteratif
-            res_iter, time_iter = measure_time(power_iterative, basis, pangkat)
+            res_iter, time_iter = measure_time(pangkatIteratif, basis, pangkat)
             
             # Hitung Rekursif
-            res_rec, time_rec = measure_time(power_recursive, basis, pangkat)
+            res_rec, time_rec = measure_time(pangkatRekursif, basis, pangkat)
 
             # Validasi Hasil
             st.divider()
@@ -307,14 +305,14 @@ def show_range_test_page():
                 progress_bar.progress((idx + 1) / total_steps)
 
                 # Ukur Iteratif
-                _, t_iter = measure_time(power_iterative, basis, exp)
+                _, t_iter = measure_time(pangkatIteratif, basis, exp)
                 
                 # Ukur Rekursif (Skip jika terlalu besar untuk mencegah crash)
                 if exp > 5000:
                     t_rec = None 
                 else:
                     try:
-                        _, t_rec = measure_time(power_recursive, basis, exp)
+                        _, t_rec = measure_time(pangkatRekursif, basis, exp)
                     except RecursionError:
                         t_rec = None
 
